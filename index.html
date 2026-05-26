@@ -11,7 +11,6 @@
 :root{
   --gold:#d4af37;
   --dark:#07070a;
-  --card:#11131a;
   --text:#eaeaea;
   --muted:#b8b8b8;
 }
@@ -40,7 +39,7 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:16px 50px;
-  background:rgba(10,10,14,0.6);
+  background:rgba(10,10,14,0.65);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(212,175,55,0.15);
 }
@@ -57,26 +56,10 @@ nav a{
   text-decoration:none;
   font-size:14px;
   transition:0.3s;
-  position:relative;
-}
-
-nav a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0%;
-  height:1px;
-  background:var(--gold);
-  transition:0.3s;
 }
 
 nav a:hover{
   color:var(--gold);
-}
-
-nav a:hover::after{
-  width:100%;
 }
 
 /* HERO */
@@ -89,7 +72,7 @@ nav a:hover::after{
   padding:0 20px;
   background:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)),
-    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=80');
+    url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80');
   background-size:cover;
   background-position:center;
 }
@@ -110,7 +93,6 @@ nav a:hover::after{
   font-size:18px;
 }
 
-/* BUTTONS */
 .btn-group{
   margin-top:35px;
   display:flex;
@@ -127,9 +109,7 @@ nav a:hover::after{
   color:white;
   text-decoration:none;
   font-weight:500;
-  transition:0.35s;
-  position:relative;
-  overflow:hidden;
+  transition:0.3s;
 }
 
 .btn:hover{
@@ -162,7 +142,7 @@ section{
 .about img{
   width:100%;
   border-radius:18px;
-  filter:brightness(0.9) contrast(1.1);
+  filter:brightness(0.95) contrast(1.1);
   transition:0.4s;
 }
 
@@ -173,6 +153,7 @@ section{
 .about p{
   color:var(--muted);
   line-height:1.9;
+  font-size:16px;
 }
 
 /* GALLERY */
@@ -216,15 +197,20 @@ section{
 
 /* CONTACT */
 .contact{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:30px;
   text-align:center;
 }
 
-.contact-info p{
-  margin-bottom:10px;
+.contact p{
   color:var(--muted);
+  margin-bottom:10px;
+}
+
+.btn-group{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 /* MAP */
@@ -232,7 +218,7 @@ iframe{
   width:100%;
   border:none;
   border-radius:14px;
-  margin-top:30px;
+  margin-top:35px;
 }
 
 /* FOOTER */
@@ -297,11 +283,13 @@ footer{
   <h2 class="section-title fade">About</h2>
 
   <div class="about fade">
-    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80"/>
+    <!-- FIXED IMAGE: actual haircut/barber scene -->
+    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=80"/>
+
     <p>
-      <strong style="color:#d4af37">Terry's Barber Shop</strong> delivers a high-end grooming experience
-      focused on precision, detail, and modern style. Every haircut is crafted with care to ensure
-      a clean, confident look tailored to each client.
+      <strong style="color:#d4af37">Terry's Barber Shop</strong> is a premium grooming destination in Wylie, Texas,
+      focused on precision fades, clean beard work, and modern styling.
+      Every cut is delivered with attention to detail in a relaxed, luxury environment built for confidence and style.
     </p>
   </div>
 </section>
@@ -311,7 +299,7 @@ footer{
   <h2 class="section-title fade">Gallery</h2>
 
   <div class="gallery">
-    <img class="fade" src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?auto=format&fit=crop&w=800&q=80"/>
+    <img class="fade" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"/>
     <img class="fade" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"/>
     <img class="fade" src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80"/>
     <img class="fade" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"/>
@@ -323,32 +311,30 @@ footer{
   <h2 class="section-title fade">Client Reviews</h2>
 
   <div class="testimonials">
-    <div class="testimonial fade">“Best haircut I’ve had in years. Extremely professional.”</div>
-    <div class="testimonial fade">“Clean fades, great service, and always consistent.”</div>
-    <div class="testimonial fade">“Hands down the best barber in Wylie.”</div>
+    <div class="testimonial fade">“Best haircut I’ve had in years. Extremely clean fades.”</div>
+    <div class="testimonial fade">“Professional, consistent, and high-quality service.”</div>
+    <div class="testimonial fade">“Easily the best barber in Wylie.”</div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2 class="section-title fade">Book Your Appointment</h2>
+  <h2 class="section-title fade">Book Now</h2>
 
   <div class="contact fade">
-    <div class="contact-info">
-      <p><strong>Phone:</strong> (214) 501-2100</p>
-      <p><strong>Address:</strong> 627 S State Hwy 78, Wylie, TX 75098</p>
+    <p><strong>Phone:</strong> (214) 501-2100</p>
+    <p><strong>Address:</strong> 627 S State Hwy 78, Wylie, TX 75098</p>
 
-      <div class="btn-group">
-        <a class="btn" href="tel:2145012100">Call Now</a>
-        <a class="btn" href="sms:2145012100">Text Now</a>
-      </div>
+    <div class="btn-group">
+      <a class="btn" href="tel:2145012100">Call Now</a>
+      <a class="btn" href="sms:2145012100">Text Now</a>
     </div>
-  </div>
 
-  <iframe
-    height="320"
-    src="https://www.google.com/maps?q=627+S+State+Hwy+78,+Wylie,+TX+75098&output=embed">
-  </iframe>
+    <iframe
+      height="320"
+      src="https://www.google.com/maps?q=627+S+State+Hwy+78,+Wylie,+TX+75098&output=embed">
+    </iframe>
+  </div>
 </section>
 
 <footer>
